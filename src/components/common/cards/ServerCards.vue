@@ -9,7 +9,7 @@ const getServers = async () => {
   try {
     const response = await fetch("https://pg-backend-navy.vercel.app/api/servers/", {
       method: "GET",
-      mode: "cors", // Forzamos el modo cors
+      mode: "cors",
       headers: {
         "Content-Type": "application/json"
       }

@@ -122,7 +122,7 @@ import DiscordButton from "../common/buttons/DiscordButton.vue";
             >
               <h1
                 if="discord-server"
-                class="text-3xl md:text-5xl font-bold mb-4"
+                class="text-3xl mx-auto md:text-5xl text-center font-bold mb-4"
               >
                   Servidor de Discord
               </h1>
