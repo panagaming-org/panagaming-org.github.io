@@ -9,7 +9,7 @@
         <!-- Menú de escritorio -->
         <div class="hidden lg:flex flex-none items-center space-x-4">
             <ul class="menu menu-horizontal font-bold px-1">
-                <li><router-link to="/">Quiénes Somos</router-link></li>
+                <li><router-link to="/">Inicio</router-link></li>
                 <li><router-link to="/actividades">Actividades</router-link></li>
                 <li><router-link to="/the-backtrack-knights">Los Caballeros Backtrack</router-link></li>
                 <li><router-link to="/donaciones">Donaciones</router-link></li>
@@ -28,7 +28,7 @@
                 </label>
                 <ul tabindex="0"
                     class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-zinc-900 rounded-box w-52">
-                    <li><router-link to="/">Quiénes Somos</router-link></li>
+                    <li><router-link to="/">Inicio</router-link></li>
                     <li><router-link to="/actividades">Actividades</router-link></li>
                     <li><router-link to="/the-backtrack-knights">Los Caballeros Backtrack</router-link></li>
                     <li><router-link to="/donaciones">Donaciones</router-link></li>

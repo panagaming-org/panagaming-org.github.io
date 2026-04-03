@@ -9,5 +9,13 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     }
   },
-  base: 'https://panagaming-org.github.io/'
+  base: 'https://panagaming-org.github.io/',
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://pg-backend-navy.vercel.app',
+        changeOrigin: true,      
+      }
+    }
+  }
 })

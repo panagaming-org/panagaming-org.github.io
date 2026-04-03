@@ -3,6 +3,7 @@ import HomeView from '@/views/HomeView.vue'
 import ActivitiesView from '../views/ActivitiesView.vue'
 import DonationsView from '../views/DonationsView.vue'
 import BacktrackView from '../views/BacktrackView.vue'
+import ServerView from '../views/ServersView.vue'
 
 const router = createRouter({
   history: createWebHashHistory(), 
@@ -12,16 +13,20 @@ const router = createRouter({
       component: HomeView
     },
     {
-        path: '/actividades',
-        component: ActivitiesView
+      path: '/actividades',
+      component: ActivitiesView
     },
     {
-        path: '/donaciones',
-        component: DonationsView
+      path: '/donaciones',
+      component: DonationsView
     },
     {
-        path: '/the-backtrack-knights',
-        component: BacktrackView
+      path: '/the-backtrack-knights',
+      component: BacktrackView
+    },
+    {
+      path: '/servidores',
+      component: ServerView
     }
   ]
 })

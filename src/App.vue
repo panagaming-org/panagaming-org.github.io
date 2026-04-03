@@ -1,9 +1,7 @@
 <script setup></script>
 
 <template>
-  <div>
   <router-view />
-  </div>
 </template>
 
 <style>
@@ -14,6 +12,7 @@
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: 1600px;
+    height: 100%;
   }
 
   .backtrack-section {
