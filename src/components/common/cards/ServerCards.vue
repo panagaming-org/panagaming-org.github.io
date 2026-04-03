@@ -10,9 +10,6 @@ const getServers = async () => {
   try {
     const response = await fetch("/api/servers/", {
       credentials: "omit",
-      headers: {
-        "Content-Type": "application/json",
-      },
     });
     const data = await response.json();
 
