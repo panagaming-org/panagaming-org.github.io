@@ -5,27 +5,20 @@ import ServerStatus from "@/components/status/ServerStatus.vue";
 const servers = ref([]);
 const loading = ref(true);
 
-// 1. Al cargar tus datos de la API, asegúrate de agregar 'currentSlide'
 const getServers = async () => {
   try {
-    const response = await fetch("/api/servers", {
-      credentials: "omit",
-    });
+    const response = await fetch("https://pg-backend-navy.vercel.app/api/servers/");
     const data = await response.json();
 
-    // Agregamos la propiedad currentSlide a cada servidor para controlar su carrusel
     servers.value = data.map((server) => ({
       ...server,
       currentSlide: 0,
     }));
-  } catch (error) {
-    console.error(error);
   } finally {
     loading.value = false;
   }
 };
 
-// 2. Funciones de navegación
 const nextSlide = (server) => {
   if (server.currentSlide < server.images.length - 1) {
     server.currentSlide++;
