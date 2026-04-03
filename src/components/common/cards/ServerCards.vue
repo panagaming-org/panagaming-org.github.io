@@ -8,7 +8,7 @@ const loading = ref(true);
 // 1. Al cargar tus datos de la API, asegúrate de agregar 'currentSlide'
 const getServers = async () => {
   try {
-    const response = await fetch("https://pg-backend-navy.vercel.app/api/servers/", {
+    const response = await fetch("/api/servers", {
       credentials: "omit",
     });
     const data = await response.json();
