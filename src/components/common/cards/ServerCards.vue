@@ -8,7 +8,12 @@ const loading = ref(true);
 // 1. Al cargar tus datos de la API, asegúrate de agregar 'currentSlide'
 const getServers = async () => {
   try {
-    const response = await fetch("/api/servers/");
+    const response = await fetch("/api/servers/", {
+      credentials: "omit",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     const data = await response.json();
 
     // Agregamos la propiedad currentSlide a cada servidor para controlar su carrusel
