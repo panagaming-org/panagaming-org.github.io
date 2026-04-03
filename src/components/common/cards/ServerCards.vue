@@ -7,7 +7,13 @@ const loading = ref(true);
 
 const getServers = async () => {
   try {
-    const response = await fetch("https://pg-backend-navy.vercel.app/api/servers/");
+    const response = await fetch("https://pg-backend-navy.vercel.app/api/servers/", {
+      method: "GET",
+      mode: "cors", // Forzamos el modo cors
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
     const data = await response.json();
 
     servers.value = data.map((server) => ({
