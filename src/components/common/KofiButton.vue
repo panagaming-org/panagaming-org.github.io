@@ -2,7 +2,6 @@
     <a href="https://ko-fi.com/ikerjavierhernandez" target="_blank"
         class="inline-flex items-center gap-3 sm:gap-4 bg-[#00e5ff] text-black px-4 sm:px-6 py-3 rounded-xl font-semibold text-base sm:text-lg shadow-lg shadow-[#00e5ff]/40 transition-colors hover:bg-[#5ff6ff]">
 
-        <!-- SVG Ko-fi -->
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 48 48" class="flex-shrink-0">
             <path fill="#29b6f6" d="M24,44C12.972,44,4,35.028,4,24S12.972,4,24,4s20,8.972,20,20S35.028,44,24,44z">
             </path>

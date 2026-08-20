@@ -1,0 +1,41 @@
+  /* 1. Ocultar el banner superior de Google Translate */
+  .goog-te-banner-frame,
+  .goog-te-banner-frame.skiptranslate,
+  iframe.goog-te-banner-frame,
+  iframe[id=":1.container"],
+  iframe[id=":2.container"],
+  iframe[class*="goog-te-banner-frame"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+  }
+
+  /* 2. Corregir el desplazamiento superior que Google le aplica al <body> */
+  body {
+    top: 0px !important;
+    position: static !important;
+    margin-top: 0px !important;
+  }
+
+  /* 3. Ocultar el elemento de inicialización interno */
+  #google_translate_element {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* 4. Eliminar resaltados de texto y tooltips flotantes */
+  .goog-text-highlight {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  #goog-gt-tt, 
+  .goog-te-balloon-frame {
+    display: none !important;
+  }

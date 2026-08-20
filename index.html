@@ -1,18 +1,43 @@
 <!doctype html>
 <html lang="es" data-theme="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Pana Gaming</title>
-    <link rel="icon" type="image/png" href="./src/assets/images/logo.png">
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pana Gaming</title>
+  <link rel="icon" type="image/png" href="./src/assets/images/logo.png">
+  <link href="/src/assets/css/translate.css" rel="stylesheet" type="text/css" />
+  <link href="/src/assets/css/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- Contenedor oculto del motor de traducción -->
+  <div id="google_translate_element" style="display:none;"></div>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es', // Idioma base en el que escribes tu web
+        // Lista de idiomas disponibles: Español, Inglés, Francés, Portugués, Alemán, Japonés
+        includedLanguages: 'es,en,fr,pt,de,ja',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+
+    // Función global accesible desde Vue para cambiar el idioma
+    function cambiarIdiomaGlobal(langCode) {
+      var select = document.querySelector('.goog-te-combo');
+      if (select) {
+        select.value = langCode;
+        select.dispatchEvent(new Event('change'));
+      }
+    }
+  </script>
+  <script 
+    type="text/javascript" 
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>

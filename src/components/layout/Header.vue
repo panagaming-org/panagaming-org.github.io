@@ -1,3 +1,6 @@
+<script setup>
+import LanguageSelector from '../common/LanguageSelector.vue';
+</script>
 <template>
     <div class="header navbar text-white font-bold bg-base-100 shadow-sm sticky top-0 z-50">
         <div class="flex-1">
@@ -13,6 +16,7 @@
                 <li><router-link to="/actividades">Actividades</router-link></li>
                 <li><router-link to="/the-backtrack-knights">Los Caballeros Backtrack</router-link></li>
                 <li><router-link to="/donaciones">Donaciones</router-link></li>
+                <li><LanguageSelector/></li>
             </ul>
         </div>
 
@@ -32,6 +36,7 @@
                     <li><router-link to="/actividades">Actividades</router-link></li>
                     <li><router-link to="/the-backtrack-knights">Los Caballeros Backtrack</router-link></li>
                     <li><router-link to="/donaciones">Donaciones</router-link></li>
+                    <li><LanguageSelector/></li>
                 </ul>
             </div>
         </div>
