@@ -12,7 +12,7 @@ const offlineServers = ref([]);
 
 const loading = ref(true);
 
-const endpoint = "http://localhost:5000/api/servers/";
+const endpoint = "https://pg-backend-navy.vercel.app/api/servers/";
 
 const getServers = async () => {
   try {
